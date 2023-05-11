@@ -6,14 +6,11 @@ import { AppComponent } from './app.component';
 import { FutureComponent } from './future/future.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TodayComponent } from './today/today.component';
-import { WeatherComponent } from './weather/weather.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     FutureComponent,
-         TodayComponent,
-         WeatherComponent,
+    TodayComponent,
    
   ],
   imports: [
