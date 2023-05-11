@@ -1,0 +1,19 @@
+
+<div class="primary">
+    <h4 class="heading text-center">5-day Forecast</h4>
+    <div class="row">
+        <div class="col" *ngFor="let forecast of weatherData">
+
+        <table> 
+            <tr><td>{{ forecast.dt_txt | date:'EEE'}}</td></tr>
+   
+            <tr><dt><img style="height: 50px; width: 50px" src="https://openweathermap.org/img/wn/{{forecast.weather[0].icon}}.png"></dt></tr>
+
+            <tr><td>{{forecast.main.temp_min |  number:'1.0-1'}}°{{units=='imperial' ?'C'  : 'F'}} / {{forecast.main.temp_max |  number:'1.0-1'}}°{{units=='imperial' ?'C'  : 'F'}}</td></tr>
+
+            <tr><td>{{forecast.weather[0].description}}</td></tr>
+        </table>
+        
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.container{
+    background-color: rgb(137, 137, 238);
+    width:800px;
+    height:90vh;
+    margin-top: 1em;
+    border-radius: 20px;
+    box-shadow: 10px 20px 30px var(--shadow-dark);
+    padding:10px;
+}

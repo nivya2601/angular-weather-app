@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="col-sm-12 text-center">
+            <div class="Input-group mt-5">
+                <input class="form-control" type="text" #userInput placeholder="Enter city name or zipcode">
+                <div class="Input-group-append">
+                    <button class="Input-group-text btn-btn-outline-primary" (click)="getCity(userInput.value)">Search city</button>
+              &nbsp;<button class="Input-group-text btn-btn-outline-primary" (click)="getZipcode(userInput.value)">Search by zip with countrycode</button>
+                </div>
+            </div>
+            <h3>{{weather.name}} ,{{weather.sys.country}}</h3>
+        </div>
+        <div class="col-sm-12 text-center">
+            <img style="width:60px;height:60px;" src="https://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png" alt="weather-img">
+            {{weather.main.temp|  number:'1.0-1'}}°{{units=='imperial' ?'C'  : 'F'}}
+            <b><p class="text-uppercase font-italic">{{weather.weather[0].description}}</p></b>
+            
+        </div>
+        <table class="table table-light table-striped table-bordered table-sm">
+            <tbody>
+                <tr>
+                    <td>Humidity</td>
+                    <td>{{weather.main.humidity}} %</td>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td>{{weather.main.pressure}} hpa</td>
+                </tr>
+                <tr>
+                    <td>Wind</td>
+                    <td>{{weather.wind.speed}} km/hr</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
