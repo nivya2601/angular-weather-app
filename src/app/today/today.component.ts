@@ -11,7 +11,7 @@ export class TodayComponent implements OnInit {
   lat!: number;
   lon!: number;
   weather: any;
-  city:string='Thrissur';
+  city:string='';
   units:string='imperial';
   currentTime=new Date();
   constructor(private weatherService:WeatherService) { }
